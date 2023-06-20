@@ -63,11 +63,11 @@ The script provides functionality to analyze the weather data for specific hemis
 
 To analyze data for a specific hemisphere, uncomment the corresponding code blocks in the script.
 
-API Code README
-Description
+Vacation API readme:
+Description:
 This API code utilizes the Geoapify API to find nearby hotels for a given set of cities based on specific criteria such as maximum temperature and humidity. It creates a Pandas DataFrame of city data, filters it based on the criteria, and then searches for the nearest hotel accommodation using the Geoapify API. The retrieved hotel names and countries are stored in a new DataFrame.
 
-Dependencies
+Dependencies:
 hvplot.pandas
 pandas
 requests
