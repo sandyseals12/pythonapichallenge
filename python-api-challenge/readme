@@ -1,0 +1,64 @@
+Weather Data Analysis:
+This script retrieves weather data for a list of cities using the OpenWeatherMap API. It collects information such as latitude, longitude, maximum temperature, humidity, cloudiness, wind speed, country, and date for each city. The collected data is then analyzed and visualized to observe the relationship between various weather parameters and latitude.
+
+Dependencies:
+The following dependencies are required to run the script:
+
+matplotlib.pyplot
+pandas
+numpy
+requests
+time
+scipy.stats.linregress
+os
+citipy
+
+Setup:
+
+Import the necessary libraries and modules.
+Set up the OpenWeatherMap API key by importing it from api_keys.py file.
+Create an empty list, lat_lngs, to hold latitude and longitude combinations.
+Create an empty list, cities, to hold the city names.
+Define the latitude and longitude ranges.
+Generate random latitude and longitude combinations within the defined ranges.
+Use the citipy module to identify the nearest city for each latitude and longitude combination.
+Add unique cities to the cities list.
+Set up the base URL for the OpenWeatherMap API and the endpoint for the weather data.
+Create an empty list, city_data, to store the weather data for each city.
+Loop through the cities list and make API requests to fetch weather data.
+Parse the JSON response and extract the required weather parameters.
+Append the city information to the city_data list.
+Handle errors for cities that are not found in the API.
+Print a confirmation message once data retrieval is complete.
+Create a pandas DataFrame, city_data_df, to store the collected city data.
+Save the city_data_df as a CSV file in the "output_data" folder.
+Load the saved data into city_data_df.
+
+Data Analysis and Visualization:
+
+Scatter Plots:
+The script generates four scatter plots to visualize the relationship between latitude and various weather parameters:
+
+Latitude vs. Max Temperature
+Latitude vs. Humidity
+Latitude vs. Cloudiness
+Latitude vs. Wind Speed
+The scatter plots are saved as PNG images in the "output_data" folder.
+
+Linear Regression:
+The script also performs linear regression analysis on the scatter plots to determine the relationship between latitude and weather parameters in the Northern and Southern Hemispheres separately. The linear regression equations and R-squared values are displayed on the plots.
+
+The linear regression analysis is performed on the following relationships:
+
+Northern Hemisphere - Max Temperature vs. Latitude
+Southern Hemisphere - Max Temperature vs. Latitude
+Northern Hemisphere - Humidity vs. Latitude
+Southern Hemisphere - Humidity vs. Latitude
+Northern Hemisphere - Cloudiness vs. Latitude
+Southern Hemisphere - Cloudiness vs. Latitude
+Northern Hemisphere - Wind Speed vs. Latitude
+Southern Hemisphere - Wind Speed vs. Latitude
+Additional Features:
+The script provides functionality to analyze the weather data for specific hemispheres. The data is divided into Northern and Southern Hemispheres based on latitude, and separate analysis and visualizations are performed for each hemisphere.
+
+To analyze data for a specific hemisphere, uncomment the corresponding code blocks in the script.
