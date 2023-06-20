@@ -62,3 +62,43 @@ Additional Features:
 The script provides functionality to analyze the weather data for specific hemispheres. The data is divided into Northern and Southern Hemispheres based on latitude, and separate analysis and visualizations are performed for each hemisphere.
 
 To analyze data for a specific hemisphere, uncomment the corresponding code blocks in the script.
+
+API Code README
+Description
+This API code utilizes the Geoapify API to find nearby hotels for a given set of cities based on specific criteria such as maximum temperature and humidity. It creates a Pandas DataFrame of city data, filters it based on the criteria, and then searches for the nearest hotel accommodation using the Geoapify API. The retrieved hotel names and countries are stored in a new DataFrame.
+
+Dependencies
+hvplot.pandas
+pandas
+requests
+Setup
+Import the necessary libraries:
+
+hvplot.pandas
+pandas
+requests
+Set up the API key:
+
+Replace geoapify_key with your own API key.
+Load the CSV file:
+
+Make sure the CSV file created in Part 1 is present in the output_data directory.
+Load the CSV file into a Pandas DataFrame.
+Clean the data:
+
+Drop any rows with missing latitude (Lat) and longitude (Lng) values.
+Usage
+Generate a map with all cities:
+
+Create an interactive map with city markers based on latitude (Lat), longitude (Lng), and humidity (Humidity).
+Filter the cities based on criteria:
+
+Create a new DataFrame (filtered_df) that contains cities with a maximum temperature (Max Temp) less than or equal to 105 and a humidity (Humidity) of 60.
+Generate a map with filtered cities:
+
+Create an interactive map with filtered city markers.
+Find nearby hotels and store the results:
+
+Create a new DataFrame (hotel_df) that stores the city, country, coordinates, and humidity from the filtered cities DataFrame.
+Iterate through the hotel_df DataFrame and make API requests to find the nearest hotel for each city using the Geoapify API. Store the hotel names and countries in the DataFrame.
+
